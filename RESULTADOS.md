@@ -2,10 +2,32 @@
 
 
 ## 📈 Resumen
-✅ 0 correctas de 1 queries
+✅ 3 correctas de 4 queries
 
-## ❌ Query 1: Error
-- **Descripción**: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SELECT nombre, precio FROM producto
+## ✅ Query 1: Correcto
 
--- 3. Llista totes les columnes de la taula' at line 5
+⏱ Tiempo: 0.38 ms
+🔍 No se usó ningún índice en esta consulta.
+
+---
+
+## ✅ Query 2: Correcto
+
+⏱ Tiempo: 0.28 ms
+🔍 No se usó ningún índice en esta consulta.
+
+---
+
+## ✅ Query 3: Correcto
+
+⏱ Tiempo: 0.23 ms
+🔍 No se usó ningún índice en esta consulta.
+
+🚨 **Problemas detectados:**
+⚠️ Evitar `SELECT *`. Usar solo las columnas necesarias.
+
+---
+
+## ❌ Query 4: Error
+- **Descripción**: 'NoneType' object is not iterable
 
