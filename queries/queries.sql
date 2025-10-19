@@ -43,25 +43,35 @@ SELECT nombre, TRUNCATE(precio, 0) AS precio_truncado
 FROM producto;
 
 -- 11. Mostra una llista amb els codis dels fabricants que apareixen a la taula producto, incloent possibles repeticions.
-
+SELECT codigo FROM producto;
 
 -- 12. Llista el codi dels fabricants que tenen productes en la taula producto, eliminant els codis que apareixen repetits.
-
+SELECT DISTINCT codigo FROM producto;
 
 -- 13. Llista els noms dels fabricants ordenats de manera ascendent
-
+SELECT nombre
+FROM fabricante
+ORDER BY nombre ASC;
 
 -- 14. Llista els noms dels fabricants ordenats de manera descendent
-
+SELECT nombre
+FROM fabricante
+ORDER BY nombre DESC;
 
 -- 15. Llista els noms i els preus dels productes ordenats, en primer lloc, pel nom de manera ascendent i, en segon lloc, pel preu de manera descendent.
-
+SELECT nombre, precio
+FROM producto
+ORDER BY nombre ASC, precio DESC;
 
 -- 16. Retorna una llista amb les 5 primeres files de la taula fabricante.
-
+SELECT *
+FROM fabricante
+LIMIT 5;
 
 -- 17. Retorna una llista amb 2 files a partir de la quarta fila de la taula fabricante. La quarta fila també s'ha d'incloure en la resposta.
-
+SELECT *
+FROM fabricante
+LIMIT 2 OFFSET 3;
 
 -- 18. Llista el nom i el preu del producte més barat. (Utilitza solament les clàusules ORDER BY i LIMIT).
 
