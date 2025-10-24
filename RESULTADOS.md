@@ -6,7 +6,7 @@
 
 ## ✅ Query 1: Correcto
 
-⏱ Tiempo: 0.46 ms
+⏱ Tiempo: 0.39 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -20,17 +20,14 @@
 
 ## ✅ Query 3: Correcto
 
-⏱ Tiempo: 0.27 ms
+⏱ Tiempo: 0.28 ms
 🔍 No se usó ningún índice en esta consulta.
-
-🚨 **Problemas detectados:**
-⚠️ Evitar `SELECT *`. Usar solo las columnas necesarias.
 
 ---
 
 ## ✅ Query 4: Correcto
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.29 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -95,7 +92,7 @@
  Disco SSD 1 TB | 151.00
 ```
 
-⏱ Tiempo: 0.29 ms
+⏱ Tiempo: 0.27 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -112,7 +109,7 @@
  Disco SSD 1 TB | 150.00
 ```
 
-⏱ Tiempo: 0.27 ms
+⏱ Tiempo: 0.29 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -181,14 +178,14 @@
 
 ## ✅ Query 13: Correcto
 
-⏱ Tiempo: 0.28 ms
+⏱ Tiempo: 0.29 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 14: Correcto
 
-⏱ Tiempo: 0.26 ms
+⏱ Tiempo: 0.27 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -202,7 +199,7 @@
 
 ## ✅ Query 16: Correcto
 
-⏱ Tiempo: 0.27 ms
+⏱ Tiempo: 0.29 ms
 🔍 No se usó ningún índice en esta consulta.
 
 🚨 **Problemas detectados:**
@@ -212,7 +209,7 @@
 
 ## ✅ Query 17: Correcto
 
-⏱ Tiempo: 0.26 ms
+⏱ Tiempo: 0.27 ms
 🔍 No se usó ningún índice en esta consulta.
 
 🚨 **Problemas detectados:**
