@@ -63,12 +63,12 @@ FROM producto;
 
 -- 11. Mostra una llista amb els codis dels fabricants que apareixen a la taula producto, incloent possibles repeticions.
 SELECT 
-	codigo 
+	codigo AS codi
 FROM producto;
 
 -- 12. Llista el codi dels fabricants que tenen productes en la taula producto, eliminant els codis que apareixen repetits.
 SELECT 
-	DISTINCT codigo 
+	DISTINCT codigo AS codi
 FROM producto;
 
 -- 13. Llista els noms dels fabricants ordenats de manera ascendent
