@@ -58,14 +58,18 @@ FROM producto;
 -- 10. Llista els noms i els preus de tots els productes (precio truncado) de la taula producto, truncant el valor del preu per a mostrar-lo sense cap xifra decimal.
 SELECT 
 	nombre, 
-	TRUNCATE(precio, 0) AS precio truncado
+	TRUNCATE(precio, 0) AS "precio truncado"
 FROM producto;
 
 -- 11. Mostra una llista amb els codis dels fabricants que apareixen a la taula producto, incloent possibles repeticions.
-SELECT codigo FROM producto;
+SELECT 
+	codigo 
+FROM producto;
 
 -- 12. Llista el codi dels fabricants que tenen productes en la taula producto, eliminant els codis que apareixen repetits.
-SELECT DISTINCT codigo FROM producto;
+SELECT 
+	DISTINCT codigo 
+FROM producto;
 
 -- 13. Llista els noms dels fabricants ordenats de manera ascendent
 SELECT nombre
