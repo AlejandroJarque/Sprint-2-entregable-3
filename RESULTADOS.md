@@ -2,25 +2,25 @@
 
 
 ## 📈 Resumen
-✅ 13 correctas de 18 queries
+✅ 14 correctas de 18 queries
 
 ## ✅ Query 1: Correcto
 
-⏱ Tiempo: 0.36 ms
+⏱ Tiempo: 0.34 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 2: Correcto
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.29 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 3: Correcto
 
-⏱ Tiempo: 0.28 ms
+⏱ Tiempo: 0.32 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -34,21 +34,21 @@
 
 ## ✅ Query 5: Correcto
 
-⏱ Tiempo: 0.36 ms
+⏱ Tiempo: 0.28 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 6: Correcto
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.28 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 7: Correcto
 
-⏱ Tiempo: 0.28 ms
+⏱ Tiempo: 0.27 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -60,39 +60,17 @@
 
 ---
 
-## ❌ Query 9: Incorrecto
-```diff
---- 
-+++ 
-@@ -1,4 +1,4 @@
--nombre | precio
-+nombre | ROUND(precio)
- Disco duro SATA3 1TB | 87.00
- Memoria RAM DDR4 8GB | 120.00
- Disco SSD 1 TB | 151.00
-```
+## ✅ Query 9: Correcto
 
-⏱ Tiempo: 0.28 ms
+⏱ Tiempo: 0.27 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
-## ❌ Query 10: Incorrecto
-```diff
---- 
-+++ 
-@@ -1,4 +1,4 @@
--nombre | precio truncado
-+nombre | TRUNCATE(precio, 0)
- Disco duro SATA3 1TB | 86.00
- Memoria RAM DDR4 8GB | 120.00
- Disco SSD 1 TB | 150.00
-```
+## ❌ Query 10: Error
+- **Descripción**: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'truncado
+FROM producto' at line 4
 
-⏱ Tiempo: 0.30 ms
-🔍 No se usó ningún índice en esta consulta.
-
----
 
 ## ❌ Query 11: Incorrecto
 ```diff
@@ -122,7 +100,7 @@
 -7.00
 ```
 
-⏱ Tiempo: 0.28 ms
+⏱ Tiempo: 0.27 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -151,21 +129,21 @@
 -7.00
 ```
 
-⏱ Tiempo: 0.28 ms
+⏱ Tiempo: 0.27 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY,codigo_fabricante
 
 ---
 
 ## ✅ Query 13: Correcto
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.29 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 14: Correcto
 
-⏱ Tiempo: 0.28 ms
+⏱ Tiempo: 0.27 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -179,7 +157,7 @@
 
 ## ✅ Query 16: Correcto
 
-⏱ Tiempo: 0.28 ms
+⏱ Tiempo: 0.29 ms
 🔍 No se usó ningún índice en esta consulta.
 
 🚨 **Problemas detectados:**
@@ -189,7 +167,7 @@
 
 ## ✅ Query 17: Correcto
 
-⏱ Tiempo: 0.28 ms
+⏱ Tiempo: 0.26 ms
 🔍 No se usó ningún índice en esta consulta.
 
 🚨 **Problemas detectados:**
