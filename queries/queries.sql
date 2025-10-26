@@ -126,7 +126,7 @@ WHERE codigo_fabricante = 2;
 SELECT 
 	producto.nombre,
     producto.precio,
-    codigo_fabricante AS 'nombre del fabricante'
+    fabricante.nombre AS 'nombre del fabricante'
 FROM producto
 JOIN fabricante
 	ON producto.codigo_fabricante = fabricante.codigo;
@@ -135,14 +135,20 @@ JOIN fabricante
 SELECT 
 	producto.nombre,
     producto.precio,
-    codigo_fabricante AS 'nombre del fabricante'
+    fabricante.nombre AS 'nombre del fabricante'
 FROM producto
 JOIN fabricante
 	ON producto.codigo_fabricante = fabricante.codigo
-ORDER BY producto.nombre ASC;
+ORDER BY fabricante.nombre ASC;
 
 -- 23. Retorna una llista amb el codi del producte, nom del producte, codi del fabricant (codigo fabricante) i nom del fabricant (nombre fabricante), de tots els productes de la base de dades.
-
+SELECT
+	producto.codigo,
+    producto.nombre,
+    producto.codigo_fabricante AS 'codigo fabricante',
+    fabricante.nombre AS 'nombre fabricante'
+FROM producto
+JOIN fabricante;
 
 -- 24. Retorna el nom, el preu i el nom del fabricant (fabricante), del producte més barat.
 
