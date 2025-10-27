@@ -155,7 +155,7 @@ JOIN fabricante
 SELECT 
 	producto.nombre,
     producto.precio,
-    fabricante.nombre AS 'fabricante'
+    fabricante.nombre AS 'fabricant'
 FROM producto
 JOIN fabricante
 	ON producto.codigo_fabricante = fabricante.codigo
