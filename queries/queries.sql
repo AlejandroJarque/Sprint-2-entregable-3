@@ -269,10 +269,7 @@ WHERE producto.codigo_fabricante IS NULL;
 
 -- 36. Retorna tots els productes del fabricant Lenovo. (Sense utilitzar INNER JOIN).
 SELECT 
-	producto.codigo,
-	producto.nombre,
-    producto.precio,
-    producto.codigo_fabricante
+	producto.nombre
 FROM producto
 JOIN fabricante
 	ON fabricante.codigo = producto.codigo_fabricante
@@ -287,7 +284,7 @@ SELECT
 FROM producto
 JOIN fabricante
 	ON fabricante.codigo = producto.codigo_fabricante
-WHERE producto.precio = 599;
+WHERE producto.precio = 559;
 
 -- 38. Llista el nom del producte més car del fabricant Lenovo.
  SELECT 
@@ -310,15 +307,22 @@ ORDER BY producto.precio ASC
 LIMIT 1;
 
 -- 40. Retorna tots els productes de la base de dades que tenen un preu major o igual al producte més car del fabricant Lenovo.
-SELECT * 
+SELECT 
+	producto.codigo,
+	producto.nombre,
+    producto.precio,
+    producto.codigo_fabricante
 FROM producto
 JOIN fabricante
 	 ON producto.codigo_fabricante = fabricante.codigo
-WHERE producto.precio >= 599;
+WHERE producto.precio >= 559;
 
 -- 41. Llista tots els productes del fabricant Asus que tenen un preu superior al preu mitjà de tots els seus productes.
 SELECT 
-  producto.nombre
+	producto.codigo,
+	producto.nombre,
+    producto.precio,
+    producto.codigo_fabricante
 FROM producto
 JOIN fabricante
   ON fabricante.codigo = producto.codigo_fabricante
