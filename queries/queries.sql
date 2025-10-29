@@ -249,10 +249,15 @@ SELECT
 FROM fabricante
 JOIN producto
 	ON fabricante.codigo = producto.codigo_fabricante
-WHERE producto.codigo_fabricante IS NOT NULL
+WHERE producto.codigo_fabricante IS NOT NULL;
 
 -- 34. Retorna un llistat de tots els fabricants que existeixen en la base de dades, juntament amb els productes que té cadascun d'ells. Inclou també els fabricants que no tenen cap producte. Mostra el nom del fabricant (fabricante) i el nom del producte (producto).
-
+SELECT 
+	fabricante.nombre AS fabricante,
+    producto.nombre
+FROM fabricante
+LEFT JOIN producto
+	ON fabricante.codigo = producto.codigo_fabricante;
 
 -- 35. Retorna un llistat on només apareguin els noms dels fabricants (fabricante) que no tenen cap producte associat.
 
