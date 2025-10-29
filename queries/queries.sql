@@ -287,13 +287,43 @@ JOIN fabricante
 WHERE producto.precio = 599;
 
 -- 38. Llista el nom del producte més car del fabricant Lenovo.
-
+ SELECT 
+	producto.nombre
+FROM producto
+JOIN fabricante
+	ON fabricante.codigo = producto.codigo_fabricante
+WHERE fabricante.nombre = 'Lenovo'
+ORDER BY producto.precio DESC
+LIMIT 1;
 
 -- 39. Llista el nom del producte més barat del fabricant Hewlett-Packard.
-
+SELECT 
+	producto.nombre
+FROM producto
+JOIN fabricante
+	ON fabricante.codigo = producto.codigo_fabricante
+WHERE fabricante.nombre = 'Hewlett-Packard'
+ORDER BY producto.precio ASC
+LIMIT 1;
 
 -- 40. Retorna tots els productes de la base de dades que tenen un preu major o igual al producte més car del fabricant Lenovo.
-
+SELECT * 
+FROM producto
+JOIN fabricante
+	 ON producto.codigo_fabricante = fabricante.codigo
+WHERE producto.precio >= 599;
 
 -- 41. Llista tots els productes del fabricant Asus que tenen un preu superior al preu mitjà de tots els seus productes.
-
+SELECT 
+  producto.nombre
+FROM producto
+JOIN fabricante
+  ON fabricante.codigo = producto.codigo_fabricante
+WHERE fabricante.nombre = 'Asus'
+  AND producto.precio > (
+    SELECT AVG(producto.precio)
+    FROM producto
+    JOIN fabricante
+      ON fabricante.codigo = producto.codigo_fabricante
+    WHERE fabricante.nombre = 'Asus'
+  );
