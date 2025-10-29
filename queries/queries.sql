@@ -254,7 +254,7 @@ WHERE producto.codigo_fabricante IS NOT NULL;
 -- 34. Retorna un llistat de tots els fabricants que existeixen en la base de dades, juntament amb els productes que té cadascun d'ells. Inclou també els fabricants que no tenen cap producte. Mostra el nom del fabricant (fabricante) i el nom del producte (producto).
 SELECT 
 	fabricante.nombre AS fabricante,
-    producto.nombre
+    producto.nombre AS producto
 FROM fabricante
 LEFT JOIN producto
 	ON fabricante.codigo = producto.codigo_fabricante;
@@ -269,7 +269,10 @@ WHERE producto.codigo_fabricante IS NULL;
 
 -- 36. Retorna tots els productes del fabricant Lenovo. (Sense utilitzar INNER JOIN).
 SELECT 
-	producto.nombre
+	producto.codigo,
+	producto.nombre,
+    producto.precio,
+    producto.codigo_fabricante
 FROM producto
 JOIN fabricante
 	ON fabricante.codigo = producto.codigo_fabricante
